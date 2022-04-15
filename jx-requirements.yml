@@ -1,0 +1,36 @@
+apiVersion: core.jenkins-x.io/v4beta1
+kind: Requirements
+spec:
+  autoUpdate:
+    enabled: false
+    schedule: ""
+  cluster:
+    chartRepository: https://github.com/jenkins-x-bdd/repo.git
+    chartKind: pages
+    clusterName: kind
+    devEnvApprovers:
+    - todo
+    environmentGitOwner: todo
+    gitKind: github
+    gitName: github
+    gitServer: https://github.com
+    provider: kubernetes
+    registry: ghcr.io
+  environments:
+  - key: dev
+  - key: staging
+  ingress:
+    domain: ""
+    externalDNS: false
+    ignoreLoadBalancer: true
+    kind: ingress
+    namespaceSubDomain: .jx.
+    tls:
+      email: ""
+      enabled: false
+      production: false
+  repository: bucketrepo
+  secretStorage: vault
+  vault:
+    url: "127.0.0.1:8200"
+  webhook: lighthouse

@@ -1,0 +1,6 @@
+- namespace: jx
+  path: helmfiles/jx/helmfile.yaml
+- namespace: secret-infra
+  path: helmfiles/secret-infra/helmfile.yaml
+- namespace: tekton-pipelines
+  path: helmfiles/tekton-pipelines/helmfile.yaml
